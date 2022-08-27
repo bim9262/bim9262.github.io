@@ -1,0 +1,159 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[
+	left=.4in,
+	right=.4in,
+	top=.4in,
+	bottom=0in,
+	headheight=20pt,
+	footskip=12pt,
+	includehead,
+	includefoot,
+	heightrounded, % to avoid spurious underfull messages
+	% showframe,
+	]{geometry}
+
+%A Few Useful Packages
+\usepackage{array}
+\usepackage{marvosym}
+\usepackage{fontspec}						%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip}	%other packages for formatting
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{titlesec}						%custom \section
+\usepackage{amsfonts}						%needed for the registered trademark
+
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour,pdfnewwindow=true}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+Path = fonts/,
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+\titleformat{\subsection}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\subsection}{0pt}{-5pt}{3pt}
+
+\newcolumntype{R}{>{\raggedleft\arraybackslash}p{1in}}
+
+%--------------------HEADER/FOOTER--------------------
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{
+	\fancyhf{}
+}
+
+\fancypagestyle{fancy}{
+	\fancyhf{}
+	\fancyhead[C]{
+		%--------------------TITLE-------------
+		{\huge\textsc{Bryan Malyn}}\\
+		\smallskip \smallskip Austin, TX\\
+		\smallskip \href{mailto:bim9262@gmail.com?subject=RE: Resume}{bim9262@gmail.com} $\cdot$ (703) 774-2253
+	}
+	\fancyfoot[R]{\textcolor{white}{Last modified \today}}
+}
+
+%--------------------BEGIN DOCUMENT----------------------
+
+\begin{document}
+\pagestyle{plain}
+\thispagestyle{fancy}
+
+
+
+%--------------------SECTIONS-----------------------------------
+
+%Section: Technical Knowledge
+\section{Technical Knowledge}
+\begin{tabular}{rl}
+	Basic Knowledge:        & \textsc{C, PHP, HTML, JavaScript, Kubernetes}, \LaTeX            \\
+	Intermediate Knowledge: & \textsc{Rust}, Relational Databases, Ansible, \textsc{Git, Java} \\
+	Advanced Knowledge:     & \textsc{CFEngine, Python}, Linux Administration                  \\
+\end{tabular}
+
+
+%Section: Work Experience
+\section{Work Experience}
+\begin{tabular}{R|p{6.2in}}
+
+	                               & \subsection{\textsc{Samsung Austin R\&D Center (SARC)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           \\
+
+	\textsc{Nov.} 2017 -           & Senior Engineer\hfill\small{\textsc{Mar.} 2021 - Present}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\
+	Present\phantom{ -}            & Engineer II\hfill\small{\textsc{Nov.} 2017 - \textsc{Mar.} 2021}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  \\
+	                               & \footnotesize Product owner of critical tools including: \textsc{CFEngine, Testnfra, GraphQL}, and our CMDB; including managing the required infrastructure to support these tools and performing critical updates. Create tooling in our configuration management tool, \textsc{CFEngine}, which makes it easier for other team members to make changes to installed packages or to lay down files (templated, raw files, and files from an http sources). This is done by writing \textsc{CFEngine} policy that parses through json files which describes what files will be placed, what permissions will be set on the file, who owns (user/group), and where those files come from. Provide tooling around our CMDB; including command line tools, REST API and \textsc{GraphQL}. \textsc{GraphQL} exposes all of the data in our CMDB through and augments the data with data from many other sources including: snmp, \textsc{Zenoss, Jira, Splunk, Infoblox, Satellite}, and \textsc{ELK}(\textsc{Testinfra} backend). Automated \textsc{Zenoss} monitoring of systems by synchronising with our CMDB to add/remove devices as they come online and are retired; and to update device production states, monitoring templates, and roles. \\
+	\multicolumn{2}{c}{}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\
+
+
+	                               & \subsection{\textsc{International Business Machines Corporation (IBM)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           \\
+
+	\textsc{Aug.} 2015 -           & Cloud Automation Specialist                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       \\
+	\textsc{Oct.} 2017\phantom{ -} & \footnotesize Created tools to ease my team's effort for periodic revalidation processes. Created new processes to decrease our clients' workloads, with a focus on security compliance. Created an \textsc{IoT} system, in \textsc{Python}, to record metrics from our labs including power, temperature and humidity. Created graphs and alerts based on those metrics using \textsc{InfluxDB}, \textsc{Grafana}, and \textsc{Kapacitor}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       \\
+	%\newline Recognised twice for the Manager's Choice Award for the practice \emph{Dare to Create Original Ideas}.\\
+	\multicolumn{2}{c}{}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               \\
+
+	                               & \subsection{\textsc{U.S. Customs and Border Protection (CBP)}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    \\
+
+	\textsc{Summers}               & Wireless Systems Program Office Intern                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \\
+	2012 - 2014                    & \footnotesize Compiled lists of radio sites across the nation. Optimised a data migration process from various projects to a standardised file structure, which would have taken months to do by hand. Created a process to calculate Operational Availability, and highlighted critical information.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             \\\\
+
+	\textsc{Summer} 2011           & Chief Technology Office Intern                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    \\
+	                               & \footnotesize Increased usability of an inventory database by gathering meta-data for thousands of entries. Investigated a middleware platform, and documented my findings to decrease the time other groups would spend on standing it up in the future.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         \\\\
+
+	\textsc{Jun.} 2009 -           & Field Technology Officer Intern                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   \\
+	\textsc{Aug.} 2010\phantom{ -} & \footnotesize Worked on a dynamic IT team that provided server maintenance and support to our customers, both in person and over the phone.
+\end{tabular}
+
+%Section: Certifications
+\section{Certifications}
+\begin{tabular}{rl}
+	\textsc{Jan.} 2021 - Present: & \textsc{ITIL}\textsuperscript{\circledR}\phantom{ }Foundation Certificate in IT Service Management $\cdot$ \href{https://www.axelos.com/successful-candidates-register}{\textbf{AXELOS}} \\
+\end{tabular}
+
+%Section: Conferences
+\section{Conferences}
+\begin{tabular}{R|p{6.2in}}
+	\textsc{Aug.} 2015 & Critical Alternatives 2015: 5\textsuperscript{th} Decennial Aarhus Conference                                                 \\
+	                   & \small Published and demoed: \href{https://doi.org/10.7146/aahcc.v1i1.21320}{\emph{Light is Loud: A Sound Driven LED Suit}}   \\
+	\multicolumn{2}{c}{}                                                                                                                               \\
+
+	\textsc{Dec.} 2014 & 8\textsuperscript{th} International Conference on Ubiquitous Computing and Ambient Intelligence                               \\
+	                   & 6\textsuperscript{th} International Work-conference on Ambient Assisted Living (UCAmI \& IWAAL 2014)                          \\
+	                   & \small Published: \href{https://doi.org/10.1007/978-3-319-13102-3_14}{\emph{The Brightnest Web-Based Home Automation System}} \\
+	%\multicolumn{2}{c}{} \\ 
+	%
+	%\textsc{Dec.} 2013 & 12\textsuperscript{th} International Conference on Mobile and Ubiquitous Multimedia\\
+	% & \small Volunteer and attendee
+\end{tabular}
+
+%Section: Languages
+%\section{Languages}
+%\begin{tabular}{rl}
+% \textsc{English:} & Native speaker\\
+%\textsc{Swedish:} & Limited working proficiency\\
+%\textsc{Spanish:} & Elementary proficiency\\
+%\end{tabular}
+
+%Section: Education
+\section{Education}
+\begin{tabular}{R|p{6.2in}}
+	\textsc{May} 2015                & Bachelor of Science in \textsc{Computer Science}, \textbf{Virginia Tech}, \emph{Blacksburg, VA}    \\
+	                                 & \small\emph{Magna Cum Laude} $\cdot$ \textsc{Major}: Computer Science $\cdot$ \textsc{Minor}: Math \\
+	% & \small\textsc{Capstone}: Creative Computing $\cdot$ \textsc{Advisor}: Prof. \textsc{Steve Harrison}\\
+	\multicolumn{2}{c}{}                                                                                                                  \\
+
+	\textsc{Fall} 2013 -             & Study Abroad at \textbf{Luleå Tekniska Universitet}, \emph{Luleå, Sweden}                          \\
+	\textsc{Spring} 2014\phantom{ -} & \small\textsc{Course Work}: Masters Level Computer Science and Swedish Language
+\end{tabular}
+
+\end{document}
