@@ -31,9 +31,11 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 whitelist:
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 minima:
   skin: solarized-dark
