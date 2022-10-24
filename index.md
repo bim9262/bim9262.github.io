@@ -19,16 +19,17 @@ So, I decided to go to Virginia Tech, a fine school, with a great engineering pr
 
 I arrived in Luleå, Sweden towards the end of summer, and within a few weeks I began to feel right at home. It was a lot of meeting people from all over the world, going to class with them, and hanging out together. I enjoyed learning Swedish both in and out of the classroom. It was amazing how fast I was able to pick up on snatches of conversation, whether it was people at the supermarket talking about the "färsk fisk" (fresh fish) or in the lunch hall at school talking about how class was. While I was there I took some really interesting computer courses. I took courses in Machine Learning, Pervasive Computing, Network Programming and Distributed Applications, Software Engineering, and Computer Graphics with Virtual Environments. At the end of the Pervasive Computing course we wrote a paper about our class project, [_The Brightnest Web-Based Home Automation System_](https://doi.org/10.1007/978-3-319-13102-3_14), which was accepted to the 8th International Conference on Ubiquitous Computing and Ambient Intelligence, 6th International Work-conference on Ambient Assisted Living (UCAmI & IWAAL 2014).
 
-### The more recent past
-
 After just one more short year at Virginia Tech, I graduated, Spring 2015, Magna Cum Laude with a BS in Computer Science with a Minor in Math from Virginia Tech. My Professor for my capstone course recommended, what we submit our final project as a demo to AA 2015: CRITICAL ALTERNATIVES 2015 The fifth decennial Aarhus conference. The demo [_Light is Loud: A Sound Driven LED Suit_](https://doi.org/10.7146/aahcc.v1i1.21320) was one of six accepted to the conference.
 
 
-### The fairly recent past
+### The more recent past
 
 I moved to Austin, TX to take a job with IBM. The work was interesting, and I enjoyed learning about how a data center functioned. One of the tasks that I was give was to build an IoT application to monitor the environmental and electrical usage statistics. This gave me the opportunity to learn a bit of _NodeJS_ and to contribute to several [NodeRed nodes](https://github.com/bimalyn-IBM), but as they say all good things must come to an end, and so a little after two years...
 
+### The fairly recent past
+
+I worked for nearly five years Samsung Austin R&D Center (SARC), where I work on an IT team, as an Automation Engineer. I worked primarily on automation around server lifecycle management including maintaining the Configuration Management Database (CMDB) as well as a GraphQL that was used to augment the information in the CMDB.
 
 ### Now
 
-I've begun working for Samsung Austin R&D Center (SARC), where I work on an IT team, as an Automation Engineer.
+I am working at Amazon on the Privacy team.
