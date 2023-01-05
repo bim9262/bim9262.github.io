@@ -9,7 +9,7 @@
 	footskip=12pt,
 	includehead,
 	includefoot,
-	heightrounded, % to avoid spurious underfull messages
+	heightrounded, 							% to avoid spurious underfull messages
 	% showframe,
 	]{geometry}
 
@@ -21,10 +21,8 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{titlesec}						%custom \section
 \usepackage{amsfonts}						%needed for the registered trademark
+\usepackage{hyperref}						%Setup hyperref package, and colours for links
 
-
-%Setup hyperref package, and colours for links
-\usepackage{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour,pdfnewwindow=true}
 
@@ -71,8 +69,6 @@ ItalicFont = Fontin-Italic.otf
 \pagestyle{plain}
 \thispagestyle{fancy}
 
-
-
 %--------------------SECTIONS-----------------------------------
 
 %Section: Technical Knowledge
@@ -83,22 +79,20 @@ ItalicFont = Fontin-Italic.otf
 	Advanced Knowledge:     & \textsc{CFEngine, Python}, Linux Administration                  \\\\
 \end{tabular}
 
-
 %Section: Work Experience
 \section{Work Experience}
 \begin{tabular}{R|B}
 
-	                               & \subsection{\textsc{Amazon}}                                                                   \\
+	                                & \subsection{\textsc{Amazon}}                                                                   \\
 
-	\textsc{Sept.} 2022 -          & Software Development Engineer II                                                               \\
-	Present\phantom{ -}            & \footnotesize Working on the Privacy@Amazon team.                                              \\
-	\multicolumn{2}{c}{}                                                                                                            \\
+	\textsc{Sept.} 2022 -           & Software Development Engineer II                                                               \\
+	Present\phantom{ -}             & \footnotesize Working on the Privacy@Amazon team.                                              \\
+	\multicolumn{2}{c}{}                                                                                                             \\
 
-	                               & \subsection{\textsc{Samsung Austin R\&D Center (SARC)}}                                        \\
-
-	\textsc{Nov.} 2017 -           & Senior Engineer\hfill\small{\textsc{Mar.} 2021 - \textsc{Sept.} 2022}                          \\
-	\textsc{Sep.} 2022\phantom{ -} & Engineer II\hfill\small{\textsc{Nov.} 2017 - \textsc{Mar.} 2021}                               \\
-	                               & \footnotesize Product owner of critical tools including: \textsc{CFEngine, Testnfra, GraphQL},
+	                                & \subsection{\textsc{Samsung Austin R\&D Center (SARC)}}                                        \\
+	\textsc{Nov.} 2017 -            & Senior Engineer\hfill\small{\textsc{Mar.} 2021 - \textsc{Sept.} 2022}                          \\
+	\textsc{Sept.} 2022\phantom{ -} & Engineer II\hfill\small{\textsc{Nov.} 2017 - \textsc{Mar.} 2021}                               \\
+	                                & \footnotesize Product owner of critical tools including: \textsc{CFEngine, Testnfra, GraphQL},
 	and our CMDB; including managing the required infrastructure to support these tools and performing 	critical updates.
 	Create tooling in our configuration management tool, \textsc{CFEngine}, which makes it easier for other team members
 	to make changes to installed packages or to lay down files (templated, raw files, and files from an http sources).
@@ -108,19 +102,18 @@ ItalicFont = Fontin-Italic.otf
 	augments the data with data from many other sources including: snmp, \textsc{Zenoss, Jira, Splunk, Infoblox, Satellite},
 	and \textsc{ELK}(\textsc{Testinfra} backend). Automated \textsc{Zenoss} monitoring of systems by synchronising with our
 	CMDB to add/remove devices as they come online and are retired; and to update device production states, monitoring templates,
-	and roles.                                                                                                                      \\
-	\multicolumn{2}{c}{}                                                                                                            \\
+	and roles.                                                                                                                       \\
+	\multicolumn{2}{c}{}                                                                                                             \\
 
+	                                & \subsection{\textsc{International Business Machines Corporation (IBM)}}                        \\
 
-	                               & \subsection{\textsc{International Business Machines Corporation (IBM)}}                        \\
-
-	\textsc{Aug.} 2015 -           & Cloud Automation Specialist                                                                    \\
-	\textsc{Oct.} 2017\phantom{ -} & \footnotesize Created tools to ease my team's effort for periodic revalidation processes.
+	\textsc{Aug.} 2015 -            & Cloud Automation Specialist                                                                    \\
+	\textsc{Oct.} 2017\phantom{ -}  & \footnotesize Created tools to ease my team's effort for periodic revalidation processes.
 	Created new processes to decrease our clients' workloads, with a focus on security compliance. Created an \textsc{IoT} system,
 	in \textsc{Python}, to record metrics from our labs including power, temperature and humidity. Created graphs and alerts based
-	on those metrics using \textsc{InfluxDB}, \textsc{Grafana}, and \textsc{Kapacitor}.                                             \\
+	on those metrics using \textsc{InfluxDB}, \textsc{Grafana}, and \textsc{Kapacitor}.                                              \\
 	%\newline Recognised twice for the Manager's Choice Award for the practice \emph{Dare to Create Original Ideas}.\\
-	\multicolumn{2}{c}{}                                                                                                            \\
+	\multicolumn{2}{c}{}                                                                                                             \\
 
 	%                                & \subsection{\textsc{U.S. Customs and Border Protection (CBP)}}                                  \\
 
