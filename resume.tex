@@ -1,11 +1,21 @@
 \documentclass[letterpaper,10pt]{article}
 
+% How wide to set the left and right margin
+\newlength\mysidemarginwidth
+\setlength\mysidemarginwidth{.5in}
+% How wide to set the P columns
+\newlength\myRwidth
+\setlength\myRwidth{1in}
+% How wide to set the B columns (calculated based on the lengths above)
+\newlength\myBwidth
+\setlength\myBwidth{\dimexpr \paperwidth-\myRwidth-2\mysidemarginwidth-.5\marginparwidth-2\tabcolsep-0.5\arrayrulewidth\relax}
+
 \usepackage[
-	left=.5in,
-	right=.5in,
+	left=\mysidemarginwidth,
+	right=\mysidemarginwidth,
 	top=.5in,
-	bottom=0in,
-	headheight=20pt,
+	bottom=.25in,
+	headheight=51pt,
 	footskip=12pt,
 	includehead,
 	includefoot,
@@ -37,12 +47,12 @@ ItalicFont = Fontin-Italic.otf
 {Fontin.otf}
 
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt}
+\titlespacing{\section}{0pt}{5pt}{5pt}
 \titleformat{\subsection}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\subsection}{0pt}{-5pt}{3pt}
+\titlespacing{\subsection}{0pt}{-5pt}{5pt}
 
-\newcolumntype{R}{>{\raggedleft\arraybackslash}p{1.0in}}
-\newcolumntype{B}{p{6.0in}}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}p{\myRwidth}}
+\newcolumntype{B}{p{\myBwidth}}
 
 %--------------------HEADER/FOOTER--------------------
 \usepackage{fancyhdr}
@@ -74,9 +84,9 @@ ItalicFont = Fontin-Italic.otf
 %Section: Technical Knowledge
 \section{Technical Knowledge}
 \begin{tabular}{rl}
-	Basic Knowledge:        & \textsc{C, PHP, HTML, JavaScript, Kubernetes}, \LaTeX            \\
-	Intermediate Knowledge: & \textsc{Rust}, Relational Databases, Ansible, \textsc{Git, Java} \\
-	Advanced Knowledge:     & \textsc{CFEngine, Python}, Linux Administration                  \\\\
+	Basic Knowledge:        & \textsc{C, PHP},Relational Databases, \LaTeX                        \\
+	Intermediate Knowledge: & \textsc{Rust}, AWS, \textsc{Git, Java, HTML, JavaScript/TypeScript} \\
+	Advanced Knowledge:     & \textsc{Python}, Linux Administration                               \\\\
 \end{tabular}
 
 %Section: Work Experience
@@ -86,7 +96,9 @@ ItalicFont = Fontin-Italic.otf
 	                                & \subsection{\textsc{Amazon}}                                                                   \\
 
 	\textsc{Sept.} 2022 -           & Software Development Engineer II                                                               \\
-	Present\phantom{ -}             & \footnotesize Working on the Privacy@Amazon team.                                              \\
+	Present\phantom{ -}             & \footnotesize Working on the Privacy team to create data lineage tools to help
+	Amazon comply with regulations such as \textsc{General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA)},
+	and \textsc{Digital Markets Act (DMA)}.                                                                                          \\
 	\multicolumn{2}{c}{}                                                                                                             \\
 
 	                                & \subsection{\textsc{Samsung Austin R\&D Center (SARC)}}                                        \\
@@ -133,11 +145,11 @@ ItalicFont = Fontin-Italic.otf
 \end{tabular}
 
 %Section: Certifications
-\section{Certifications}
-\begin{tabular}{rl}
-	\textsc{Jan.} 2021 - Present: & \textsc{ITIL}\textsuperscript{\circledR}\phantom{ }Foundation Certificate in IT Service Management
-	$\cdot$ \href{https://www.axelos.com/successful-candidates-register}{\textbf{AXELOS}}                                              \\\\
-\end{tabular}
+% \section{Certifications}
+% \begin{tabular}{rl}
+% 	\textsc{Jan.} 2021 - \textsc{Jan.} 2024: & \textsc{ITIL}\textsuperscript{\circledR}\phantom{ }Foundation Certificate in IT Service Management
+% 	$\cdot$ \href{https://www.axelos.com/successful-candidates-register}{\textbf{AXELOS}}                                                         \\\\
+% \end{tabular}
 
 %Section: Conferences
 \section{Conferences}
@@ -168,12 +180,12 @@ ItalicFont = Fontin-Italic.otf
 %Section: Education
 \section{Education}
 \begin{tabular}{R|B}
-	\textsc{May} 2015                & Bachelor of Science in \textsc{Computer Science}, \textbf{Virginia Tech}, \emph{Blacksburg, VA}    \\
-	                                 & \small\emph{Magna Cum Laude} $\cdot$ \textsc{Major}: Computer Science $\cdot$ \textsc{Minor}: Math \\
-	% & \small\textsc{Capstone}: Creative Computing $\cdot$ \textsc{Advisor}: Prof. \textsc{Steve Harrison}\\
-	\multicolumn{2}{c}{}                                                                                                                  \\
+	\textsc{May} 2015                & Bachelor of Science in \textsc{Computer Science}, \textbf{Virginia Tech}, \emph{Blacksburg, VA}     \\
+	                                 & \small\emph{Magna Cum Laude} $\cdot$ \textsc{Major}: Computer Science $\cdot$ \textsc{Minor}: Math  \\
+	                                 & \small\textsc{Capstone}: Creative Computing $\cdot$ \textsc{Advisor}: Prof. \textsc{Steve Harrison} \\
+	\multicolumn{2}{c}{}                                                                                                                   \\
 
-	\textsc{Fall} 2013 -             & Study Abroad at \textbf{Luleå Tekniska Universitet}, \emph{Luleå, Sweden}                          \\
+	\textsc{Fall} 2013 -             & Study Abroad at \textbf{Luleå Tekniska Universitet}, \emph{Luleå, Sweden}                           \\
 	\textsc{Spring} 2014\phantom{ -} & \small\textsc{Course Work}: Masters Level Computer Science and Swedish Language
 \end{tabular}
 
