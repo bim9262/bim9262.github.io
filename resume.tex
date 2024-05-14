@@ -13,7 +13,7 @@
 \usepackage[
 	left=\mysidemarginwidth,
 	right=\mysidemarginwidth,
-	top=.5in,
+	top=.25in,
 	bottom=.25in,
 	headheight=51pt,
 	footskip=12pt,
@@ -28,13 +28,30 @@
 \usepackage{marvosym}
 \usepackage{fontspec}						%for loading fonts
 \usepackage{xunicode,xltxtra,url,parskip}	%other packages for formatting
-\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xcolor}
 \usepackage{titlesec}						%custom \section
 \usepackage{amsfonts}						%needed for the registered trademark
 \usepackage{hyperref}						%Setup hyperref package, and colours for links
+\usepackage{enumitem}
 
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour,pdfnewwindow=true}
+\renewcommand{\labelitemii}{\raisebox{.4ex}{\rule{.5ex}{.5ex}}}
+
+\newenvironment{table_itemize}
+{
+	\begingroup
+	\begin{minipage}[t]{\hsize}
+	\footnotesize
+	\raggedright
+    \begin{itemize}
+	\itemsep 0pt
+}{
+	\end{itemize}
+	\end{minipage}
+	\smallskip
+	\endgroup
+}
 
 %FONTS
 \defaultfontfeatures{Mapping=tex-text}
@@ -82,20 +99,52 @@ ItalicFont = Fontin-Italic.otf
 
 %Section: Technical Knowledge
 \section{Technical Knowledge}
-\begin{tabular}{rl}
-	Basic Knowledge:        & \textsc{C, PHP},Relational Databases, \LaTeX                                      \\
-	Intermediate Knowledge: & \textsc{REST APIs, GraphQL}, AWS, \textsc{Git, Java, HTML, JavaScript/TypeScript} \\
-	Advanced Knowledge:     & \textsc{Python}, \textsc{Rust}, Linux Administration                              \\\\
-\end{tabular}
+\begin{minipage}[t]{0.3\textwidth}
+	\begin{itemize}
+		\item \textsc{Python}
+		\item \textsc{Rust}
+		\item \textsc{Java}
+		\item \textsc{JavaScript/TypeScript}
+		\item \textsc{HTML}
+		\item \textsc{PHP}
+		\item \textsc{C}
+	\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\begin{itemize}
+		\item AWS
+		      \begin{itemize}
+			      \item Neptune
+			      \item SageMaker
+			      \item RDS (Aurora)/Dynamo
+			      \item ECS/EC2/Lambda
+			      \item S3
+			      \item CloudFormations/CDK
+		      \end{itemize}
+	\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\begin{itemize}
+		\item Relational Databases
+		\item \textsc{REST APIs}
+		\item \textsc{GraphQL}
+		\item Linux
+		\item \textsc{Git}
+	\end{itemize}
+\end{minipage}\\
 
 %Section: Work Experience
 \section{Work Experience}
 \begin{tabular}{R|B}
 
 	                                & \subsection{\textsc{Amazon}}                                                                   \\
-
 	\textsc{Sept.} 2022 -           & Software Development Engineer II                                                               \\
-	Present\phantom{ -}             & \footnotesize Working on the Privacy team to create data lineage tools to help
+	Present\phantom{ -}             %&
+	%\begin{table_itemize}
+	%	\item test
+	%	\item test2
+	%	\end{table_itemize}                                                                      \\
+	                                & \footnotesize Working on the Privacy team to create data lineage tools to help
 	Amazon comply with regulations such as \textsc{General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA)},
 	and \textsc{Digital Markets Act (DMA)}.                                                                                          \\
 	\multicolumn{2}{c}{}                                                                                                             \\
@@ -103,6 +152,11 @@ ItalicFont = Fontin-Italic.otf
 	                                & \subsection{\textsc{Samsung Austin R\&D Center (SARC)}}                                        \\
 	\textsc{Nov.} 2017 -            & Senior Engineer\hfill\small{\textsc{Mar.} 2021 - \textsc{Sept.} 2022}                          \\
 	\textsc{Sept.} 2022\phantom{ -} & Engineer II\hfill\small{\textsc{Nov.} 2017 - \textsc{Mar.} 2021}                               \\
+	%&
+	% \begin{table_itemize}
+	% 	\item test
+	% 	\item test2
+	% \end{table_itemize}                                                                                               \\
 	                                & \footnotesize Product owner of critical tools including: \textsc{CFEngine, Testnfra, GraphQL},
 	and our CMDB; including managing the required infrastructure to support these tools and performing 	critical updates.
 	Create tooling in our configuration management tool, \textsc{CFEngine}, which makes it easier for other team members
@@ -119,7 +173,12 @@ ItalicFont = Fontin-Italic.otf
 	                                & \subsection{\textsc{International Business Machines Corporation (IBM)}}                        \\
 
 	\textsc{Aug.} 2015 -            & Cloud Automation Specialist                                                                    \\
-	\textsc{Oct.} 2017\phantom{ -}  & \footnotesize Created tools to ease my team's effort for periodic revalidation processes.
+	\textsc{Oct.} 2017\phantom{ -}  %&
+	% \begin{table_itemize}
+	% 	\item test
+	% 	\item test2
+	% \end{table_itemize}                                                                                               \\
+	                                & \footnotesize Created tools to ease my team's effort for periodic revalidation processes.
 	Created new processes to decrease our clients' workloads, with a focus on security compliance. Created an \textsc{IoT} system,
 	in \textsc{Python}, to record metrics from our labs including power, temperature and humidity. Created graphs and alerts based
 	on those metrics using \textsc{InfluxDB}, \textsc{Grafana}, and \textsc{Kapacitor}.                                              \\
@@ -169,12 +228,12 @@ ItalicFont = Fontin-Italic.otf
 \end{tabular}
 
 %Section: Languages
-%\section{Languages}
-%\begin{tabular}{rl}
-% \textsc{English:} & Native speaker\\
-%\textsc{Swedish:} & Limited working proficiency\\D
-%\textsc{Spanish:} & Elementary proficiency\\
-%\end{tabular}
+% \section{Languages}
+% \begin{tabular}{rl}
+% 	\textsc{English:} & Native speaker              \\
+% 	\textsc{Swedish:} & Limited working proficiency \\
+% 	\textsc{Spanish:} & Elementary proficiency      \\
+% \end{tabular}
 
 %Section: Education
 \section{Education}
