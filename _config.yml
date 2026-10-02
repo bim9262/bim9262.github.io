@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -38,11 +38,18 @@ whitelist:
   - jekyll-sitemap
 
 minima:
-  skin: solarized-dark
+  skin: auto
   social_links:
-    twitter: bim9262
-    github: bim9262
-    linkedin: bryan-malyn
+    - title: github
+      icon: github
+      url: "https://github.com/bim9262"
+    - title: LinkedIn
+      icon: linkedin
+      url: "https://www.linkedin.com/in/bryan-malyn/"
+    - title: Instagram
+      icon: instagram
+      url: "https://www.instagram.com/bimalyn/"
+  hide_site_feed_link: true
 
 
 header_pages:
